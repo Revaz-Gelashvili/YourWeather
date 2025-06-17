@@ -20,26 +20,29 @@ function closeBar() {
 }
 
 const root = document.documentElement;
-const toggleBtn = document.getElementsByClassName("themeToggle");
-const icon = document.getElementsByClassName("themeIcon");
+const toggleBtns = document.querySelectorAll(".themeToggle");
+const icons = document.querySelectorAll(".themeIcon");
 
 let isDark = false;
 
 if (localStorage.getItem("theme") === "dark") {
   root.classList.add("dark");
   document.body.classList.add("dark");
-  icon.src = "./assets/icons/day-mode.svg";
+  icons.src = "./assets/icons/day-mode.svg";
 } else {
-  icon.src = "./assets/icons/night-mode.svg";
+  icons.src = "./assets/icons/night-mode.svg";
 }
 
-toggleBtn.addEventListener("click", () => {
-  const isNowDark = root.classList.toggle("dark");
-  document.body.classList.toggle("dark");
+toggleBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const isNowDark = root.classList.toggle("dark");
+    document.body.classList.toggle("dark");
+    localStorage.setItem("theme", isNowDark ? "dark" : "light");
 
-  localStorage.setItem("theme", isNowDark ? "dark" : "light");
-
-  icon.src = isNowDark
-    ? "./assets/icons/day-mode.svg"
-    : "./assets/icons/night-mode.svg";
+    icons.forEach((icon) => {
+      icon.src = isNowDark
+        ? "./assets/icons/day-mode.svg"
+        : "./assets/icons/night-mode.svg";
+    });
+  });
 });
