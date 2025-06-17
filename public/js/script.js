@@ -1,0 +1,45 @@
+const menu = document.getElementById("menu");
+const menuBar = document.getElementById("menu-bar");
+const closeMenu = document.getElementById("close");
+
+menu.addEventListener("click", openMenu);
+closeMenu.addEventListener("click", closeBar);
+
+function openMenu() {
+  menuBar.style.width = "0px";
+
+  if (menuBar.style.width === "0px") {
+    menuBar.style.width = "200px";
+  } else {
+    menuBar.style.width = "0px";
+  }
+}
+
+function closeBar() {
+  menuBar.style.width = "0px";
+}
+
+const root = document.documentElement;
+const toggleBtn = document.getElementsByClassName("themeToggle");
+const icon = document.getElementsByClassName("themeIcon");
+
+let isDark = false;
+
+if (localStorage.getItem("theme") === "dark") {
+  root.classList.add("dark");
+  document.body.classList.add("dark");
+  icon.src = "./assets/icons/day-mode.svg";
+} else {
+  icon.src = "./assets/icons/night-mode.svg";
+}
+
+toggleBtn.addEventListener("click", () => {
+  const isNowDark = root.classList.toggle("dark");
+  document.body.classList.toggle("dark");
+
+  localStorage.setItem("theme", isNowDark ? "dark" : "light");
+
+  icon.src = isNowDark
+    ? "./assets/icons/day-mode.svg"
+    : "./assets/icons/night-mode.svg";
+});

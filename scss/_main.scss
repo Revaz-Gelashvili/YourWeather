@@ -1,0 +1,9 @@
+section {
+  .menu-bar {
+    background-color: $fillColor;
+    width: 0px;
+    height: 100vh;
+    transition: 1s all;
+    overflow: hidden;
+  }
+}
