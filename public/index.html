@@ -44,9 +44,12 @@
       </div>
     </header>
     <section class="mt-[-60px]">
-      <div id="menu-bar" class="menu-bar flex flex-col gap-[50px] z-[5]">
+      <div
+        id="menu-bar"
+        class="menu-bar flex flex-col gap-[50px] z-40 relative"
+      >
         <img
-          class="w-[35px] ml-[20px] mt-[20px] mb-auto"
+          class="w-[35px] ml-[20px] mt-[20px] mb-auto cursor-pointer"
           id="close"
           src="./assets/icons/close.svg"
           alt="close"
@@ -56,7 +59,11 @@
           <a href="#"><li>Weekend</li></a>
           <a href="#"><li>Contact</li></a>
         </ul>
-        <button id="close" type="submit" class="themeToggle mt-auto mb-[20px]">
+        <button
+          id="close"
+          type="submit"
+          class="themeToggle mt-auto mb-[20px] cursor-pointer"
+        >
           <img
             class="themeIcon w-[40px] ml-[20px]"
             src="./assets/icons/day-mode.svg"
