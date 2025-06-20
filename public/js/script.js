@@ -9,7 +9,7 @@ function openMenu() {
   menuBar.style.width = "0px";
 
   if (menuBar.style.width === "0px") {
-    menuBar.style.width = "300px";
+    menuBar.style.width = "320px";
   } else {
     menuBar.style.width = "0px";
   }

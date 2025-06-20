@@ -7,4 +7,24 @@ body {
 body.dark {
   background-color: #121212;
   color: white;
+
+  .sidebar {
+    .menu-bar {
+      background-color: #121212;
+      width: 0px;
+      height: 100vh;
+      transition: 1s all;
+      overflow: hidden;
+      color: white;
+    }
+  }
+
+  .main-content {
+    .container {
+      .weather-table {
+        background-color: #121212;
+        color: white;
+      }
+    }
+  }
 }

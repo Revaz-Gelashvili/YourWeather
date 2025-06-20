@@ -12,7 +12,7 @@
   <body>
     <header class="flex h-[60px] justify-between items-center">
       <div class="mx-[20px] flex items-center gap-[20px]">
-        <a href="" class="w-[40px]"
+        <a href="#" class="w-[40px]"
           ><img src="./public/assets/icons/logo.svg" alt="logo"
         /></a>
         <div class="hidden md:block">
@@ -43,11 +43,8 @@
         </div>
       </div>
     </header>
-    <section class="mt-[-60px]">
-      <div
-        id="menu-bar"
-        class="menu-bar flex flex-col gap-[50px] z-40 relative"
-      >
+    <section class="sidebar">
+      <div id="menu-bar" class="menu-bar flex flex-col gap-[50px] z-40 fixed">
         <img
           class="w-[35px] ml-[20px] mt-[20px] mb-auto cursor-pointer"
           id="close"
@@ -70,6 +67,96 @@
             alt="day/night-mode"
           />
         </button>
+      </div>
+    </section>
+    <section class="main-content flex justify-center">
+      <div class="container px-10 sm:px-[20px] pt-10">
+        <div class="search-wrapper w-full">
+          <input
+            class="search-city w-full"
+            type="text"
+            placeholder="Find Your City..."
+          />
+        </div>
+        <div
+          class="weather-image w-full mt-[20px] h-[100px] sm:h-[150px] md:h-[200px] lg:h-[300px]"
+        >
+          <!-- image in main.scss -->
+        </div>
+        <div class="main-weather-data pt-10 overflow-x-auto">
+          <div class="inline-block min-w-full align-middle">
+            <table class="weather-table min-w-[600px]">
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Condition</th>
+                  <th>High</th>
+                  <th>Low</th>
+                  <th>Precipitation</th>
+                  <th>Wind</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monday</td>
+                  <td><span class="condition-icon sunny"></span></td>
+                  <td>25°C</td>
+                  <td>15°C</td>
+                  <td>0%</td>
+                  <td>10 km/h</td>
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td><span class="condition-icon cloudy"></span></td>
+                  <td>27°C</td>
+                  <td>17°C</td>
+                  <td>10%</td>
+                  <td>12 km/h</td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td><span class="condition-icon partly-cloudy"></span></td>
+                  <td>24°C</td>
+                  <td>16°C</td>
+                  <td>20%</td>
+                  <td>15 km/h</td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td><span class="condition-icon rainy"></span></td>
+                  <td>22°C</td>
+                  <td>14°C</td>
+                  <td>60%</td>
+                  <td>20 km/h</td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td><span class="condition-icon sunny"></span></td>
+                  <td>26°C</td>
+                  <td>16°C</td>
+                  <td>0%</td>
+                  <td>10 km/h</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td><span class="condition-icon beach"></span></td>
+                  <td>28°C</td>
+                  <td>18°C</td>
+                  <td>10%</td>
+                  <td>12 km/h</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td><span class="condition-icon cloudy"></span></td>
+                  <td>25°C</td>
+                  <td>17°C</td>
+                  <td>20%</td>
+                  <td>15 km/h</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
   </body>
