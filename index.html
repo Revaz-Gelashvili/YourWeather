@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./js/script.js" defer></script>
-    <script src="./utils/weatherApi.js" defer></script>
+    <script src="./public/js/script.js" defer></script>
+    <script src="./public/utils/weatherApi.js" defer></script>
     <title>Your Weather</title>
   </head>
   <body>
     <header class="flex h-[60px] justify-between items-center">
       <div class="mx-[20px] flex items-center gap-[20px]">
         <a href="" class="w-[40px]"
-          ><img src="./assets/icons/logo.svg" alt="logo"
+          ><img src="./public/assets/icons/logo.svg" alt="logo"
         /></a>
         <div class="hidden md:block">
           <ul class="flex gap-[20px]">
@@ -25,7 +25,7 @@
         <img
           id="menu"
           class="md:hidden w-[40px] cursor-pointer"
-          src="./assets/icons/menu.svg"
+          src="./public/assets/icons/menu.svg"
           alt="menu"
         />
       </div>
@@ -33,7 +33,7 @@
       <div class="right-sec flex items-center gap-[20px] mr-[20px]">
         <button class="themeToggle hidden sm:block sm:w-[40px]">
           <img
-            src="./assets/icons/day-mode.svg"
+            src="./public/assets/icons/day-mode.svg"
             alt="day/night-mode"
             class="themeIcon"
           />
@@ -51,7 +51,7 @@
         <img
           class="w-[35px] ml-[20px] mt-[20px] mb-auto cursor-pointer"
           id="close"
-          src="./assets/icons/close.svg"
+          src="./public/assets/icons/close.svg"
           alt="close"
         />
         <ul class="p-[20px] flex flex-col gap-[50px] mt-auto mb-auto">
@@ -66,7 +66,7 @@
         >
           <img
             class="themeIcon w-[40px] ml-[20px]"
-            src="./assets/icons/day-mode.svg"
+            src="./public/assets/icons/day-mode.svg"
             alt="day/night-mode"
           />
         </button>

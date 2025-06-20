@@ -28,9 +28,9 @@ let isDark = false;
 if (localStorage.getItem("theme") === "dark") {
   root.classList.add("dark");
   document.body.classList.add("dark");
-  icons.src = "./assets/icons/day-mode.svg";
+  icons.src = "./public/assets/icons/day-mode.svg";
 } else {
-  icons.src = "./assets/icons/night-mode.svg";
+  icons.src = "./public/assets/icons/night-mode.svg";
 }
 
 toggleBtns.forEach((btn) => {
@@ -41,8 +41,8 @@ toggleBtns.forEach((btn) => {
 
     icons.forEach((icon) => {
       icon.src = isNowDark
-        ? "./assets/icons/day-mode.svg"
-        : "./assets/icons/night-mode.svg";
+        ? "./public/assets/icons/day-mode.svg"
+        : "./public/assets/icons/night-mode.svg";
     });
   });
 });
