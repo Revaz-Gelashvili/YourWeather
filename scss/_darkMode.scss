@@ -13,7 +13,7 @@ body.dark {
       background-color: #121212;
       width: 0px;
       height: 100vh;
-      transition: 1s all;
+      transition: background-color 0.3s, color 0.3s;
       overflow: hidden;
       color: white;
     }
@@ -22,8 +22,25 @@ body.dark {
   .main-content {
     .container {
       .weather-table {
-        background-color: #121212;
+        transition: background-color 0.3s, color 0.3s;
+        background-color: #1a1a1aa4;
         color: white;
+        thead {
+          tr:hover {
+            background: #8d8d8d;
+          }
+          tr {
+            th {
+              background-color: #1a1a1aa4;
+              color: white;
+            }
+          }
+        }
+        tbody {
+          tr:hover {
+            background: #8d8d8d;
+          }
+        }
       }
     }
   }
